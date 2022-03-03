@@ -13,17 +13,17 @@ Please check out `Example.ipynb` for a simple example.
 
 ```
 code_length, module_assignments = Infomap_st(
-								trajectories, 
-								vertices, 
-								scheme,
-								init_module, 
-								init_node,
-								deterministic,
-								n_trials,
-								n_itr)
+trajectories, 
+vertices, 
+scheme,
+init_module, 
+init_node,
+deterministic,
+n_trials,
+n_itr)
 ```    
 
-This function is a simple agglomerative heuristic that minimizes the average description length of the trajectories. 
+This is a simple agglomerative heuristic that minimizes the average description length of the trajectories. 
 This function uses Infomap [3] as the initial partition of the nodes. 
 
 
@@ -41,7 +41,7 @@ This function uses Infomap [3] as the initial partition of the nodes.
 | scheme | `'Huffman'` | Coding scheme: Huffman coding (`'Huffman'`), Shannon-Fano coding (`'Shannon-Fano'`), or the lower bound of the code length based on Shannon's source codign theorem (`'lower_bound'`).                                           | 
 | init_module           | `True`             | If `False`, the codeword for the initial module in a trajectory is ignored.   | 
 | init_node           | `True`             | If `False`, the codeword for the initial node in a trajectory is ignored.   | 
-| deterministic           | `False`             | If `True`, the algorithm merges modules deterministically.   | 
+| deterministic           | `False`             | If `True`, the algorithm merges modules deterministically from small modules.   | 
 | n_trials           | 10             | Number of trials of the agglomerative heuristic. | 
 | n_itr              | 1000           | Max. number of times that the algorithm merges modules.                                                     | 
 
@@ -55,4 +55,4 @@ This function uses Infomap [3] as the initial partition of the nodes.
 [3] https://mapequation.github.io/infomap/python/
 
 ## Citation
-Please cite ****
+Please cite [1].
