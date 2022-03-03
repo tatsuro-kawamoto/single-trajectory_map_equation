@@ -13,14 +13,15 @@ Please check out `Example.ipynb` for a simple example.
 
 ```
 code_length, module_assignments = Infomap_st(
-trajectories, 
-vertices, 
-scheme,
-init_module, 
-init_node,
-deterministic,
-n_trials,
-n_itr)
+	trajectories, 
+	vertices, 
+	scheme,
+	init_module, 
+	init_node,
+	deterministic,
+	n_trials,
+	n_itr
+)
 ```    
 
 This is a simple agglomerative heuristic that minimizes the average description length of the trajectories. 
