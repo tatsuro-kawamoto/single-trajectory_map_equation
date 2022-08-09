@@ -7,7 +7,7 @@ import numpy as np
 # Python3 program for Shannon Fano Algorithm
  
 # declare structure node
-codelimit = 2000
+# codelimit = 10000
 class node:
 	def __init__(self) -> None:
 		# for storing symbol
@@ -99,8 +99,10 @@ def display(n, p):
 
 
 def ShannonFano_code(symb2freq):
+	global codelimit
 	# Input number of symbols
 	n = len(symb2freq)
+	codelimit = n
 
 	p=[node() for _ in range(codelimit)]
 
